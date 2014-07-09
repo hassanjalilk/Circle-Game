@@ -27,7 +27,31 @@ $(document).ready(function() {
 				$('#game').append(this.$me);
 		};
 
-			
+			this.move = function() {
+				var _this = this
+				this.$me.animate({
+					top: Math.random() * 450,
+					left: Math.random() * 450
+				}, {
+					duration: _this.speed,
+					complete: function() {
+						_this.move();
+					}
+				});
+			};
+
+				this.kill = function() {
+					this.$me.css('background-color', 'red')
+					.effect({
+						effect: 'explode'
+						duration: 100,
+						complete: function() {
+							$(this).remove();
+							$('#score').text(window.game.score += 100);
+						},
+						dueue: false
+					});
+				};
 	}
 
 
