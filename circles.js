@@ -52,7 +52,14 @@ $(document).ready(function() {
 						dueue: false
 					});
 				};
-	}
+
+				Circle.init = function() {
+					var circle = new Circle();
+					circle.render();
+					circle.move();
+					return circle;
+				};
+	}	
 
 
 
