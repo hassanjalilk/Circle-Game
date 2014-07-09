@@ -16,7 +16,41 @@ $(document).ready(function() {
 			var _this = this;
 
 			this.$me = $('<div class = "circle"></div>')
-				.css('left')
-		}
+				.css('left', this.x)
+				.css('top', this.y)
+				.css('height, this.diameter')
+				.css('width', 'this.diameter')
+				.on('click', function() {
+					_this.kill();
+				});
 
+				$('#game').append(this.$me);
+		};
+
+			
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
