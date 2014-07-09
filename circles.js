@@ -59,7 +59,29 @@ $(document).ready(function() {
 					circle.move();
 					return circle;
 				};
-	}	
+
+				function Game(circleCount, duration)
+				this.score = 0;
+				this.circle = [];
+				this.circleCount = circleCount;
+				this.dration = duration * 1000;
+
+				this.start = function() {
+					for (var i=0; i < this.circleCount; i++) {
+      	this.circles.push(Circle.init());
+    }
+
+    $("#score").text(this.score);
+    setTimeout(this.stop this.duration);
+		};
+
+		this.stop = function() {
+			alert("Game OVer")
+			for (var i=0; i < window.game.circleCount; i++) {
+			window.game.circles[i].$me.remove();
+		}
+	};
+}
 
 
 
